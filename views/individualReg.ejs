@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Registration Portal</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <script src="/javascripts/script.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>    
     <link rel="stylesheet" href="/stylesheets/style.css">   
     <link href="https://fonts.googleapis.com/css?family=Dancing+Script" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
@@ -107,7 +107,7 @@
                                 <label class="w3-right">FANCY DRESS</label>
                             </div>
                             <div class="w3-col l5 s5 m5">
-                                <input type="checkbox" class="e1 event w3-left" style="padding:0px" name="event" value="FANCY DRESS">
+                                <input class="e1 event w3-left"" type="checkbox" >
                             </div>
                         </div>
                         <div class="w3-row">
@@ -213,7 +213,6 @@
             }
 
             $('input[name=class]').change(function(){
-                console.log('ufdi');
                 $('.event').each(function(){
                     $(this).addClass('w3-hide')
                 })
@@ -241,7 +240,9 @@
                 else
                     x=4;
                 $('.e'+x).each(function(){
+                    console.log($(this).attr("class").split(' '));
                     $(this).removeClass('w3-hide');
+                    console.log($(this).attr("class").split(' '));
                 })
             });
             $('select[name=school]').change(()=>{
