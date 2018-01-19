@@ -8,6 +8,7 @@
     <h1 class="w3-jumbo">
         Successfully Registered
     </h1>
+    <a href="/teamReg" class="w3-button">Reg link</a>
     <h1>Member 1:<%= kid.name1 %></h1>
     <h1>Member 2:<%= kid.name2 %></h1>
     <% if(kid.name3 != ''){%>
@@ -20,4 +21,10 @@
       <%}%> 
     </ul>
     </body>
+    <script>
+      history.pushState(null, null, document.URL);
+      window.addEventListener('popstate', function () {
+          history.pushState(null, null, document.URL);
+      });
+    </script>
 </html>
